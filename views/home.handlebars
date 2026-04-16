@@ -1,0 +1,70 @@
+
+
+
+
+
+
+
+<!-- Top Navigation Bar (formerly sidebar) -->
+<nav class="topnav-vertical">
+  <div class="topnav-logo-block">
+    <img src="/images/myc_logo.png" alt="My Crypto Logo" class="topnav-logo">
+    <span class="topnav-label">Portfolio:</span>
+  </div>
+  <ul class="topnav-links">
+    <li><a href="#" class="active"><i class="fa fa-rocket"></i> MyCrypto</a></li>
+    <li class="topnav-section-header">COIN TOOLS</li>
+    <li><a href="#"><i class="fa fa-coins"></i> Coin Market</a></li>
+    <li><a href="#"><i class="fa fa-exchange-alt"></i> Coin Converter</a></li>
+  </ul>
+</nav>
+
+<!-- Full-width Hero Banner -->
+<div class="hero-banner-screenshot">
+  <div class="hero-banner-bg-screenshot"></div>
+  <div class="hero-banner-content-screenshot">
+    <img src="/images/myc_logo.png" alt="My Crypto Logo" class="hero-logo-screenshot">
+    <div class="hero-text-screenshot">
+      <h1>MY CRYPTO</h1>
+      <span class="hero-subtitle-screenshot">Cryptocurrency Portfolio</span>
+      <p class="hero-market-screenshot">Coin Market</p>
+    </div>
+    <div class="login-dropdown login-dropdown-screenshot">
+      <button class="login-btn">Login <i class="fa fa-caret-down"></i></button>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content Vertical -->
+<div class="main-content-vertical">
+  <section class="coin-market-section">
+    <div class="table-container revamped-table-container">
+      <table class="coin-table revamped-coin-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>24h</th>
+            <th>7d</th>
+            <th>Market Cap</th>
+            <th>Volume</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each coins}}
+          <tr>
+            <td>{{inc @index}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.price}}</td>
+            <td>{{this.change24h}}</td>
+            <td>{{this.change7d}}</td>
+            <td>{{this.marketCap}}</td>
+            <td>{{this.volume}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
