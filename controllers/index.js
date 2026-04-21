@@ -26,7 +26,16 @@ router.get('/', async (req, res) => {
     res.render('home', { title: 'My Crypto Home', coins });
   } catch (err) {
     console.error('Error fetching coin data:', err.message);
-    res.render('home', { title: 'My Crypto Home', coins: [] });
+    // If rate limited, use mock data
+    let coins = [];
+    if (err.response && err.response.status === 429) {
+      coins = [
+        { name: 'Bitcoin', price: 65000, change24h: '1.2', change7d: '5.6', marketCap: 1200000000000, volume: 35000000000 },
+        { name: 'Ethereum', price: 3200, change24h: '0.8', change7d: '3.1', marketCap: 400000000000, volume: 18000000000 },
+        { name: 'Solana', price: 150, change24h: '-0.5', change7d: '2.0', marketCap: 65000000000, volume: 2500000000 }
+      ];
+    }
+    res.render('home', { title: 'My Crypto Home', coins });
   }
 });
 
