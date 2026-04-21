@@ -9,20 +9,7 @@ const controllers = require("./controllers");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const sequelize = require("./config/connection");
-const SequelizeStore = require("connect-session-sequelize")(session.Store);
-
-const sess = {
-  secret: "Super secret secret",
-  cookie: {},
-  resave: false,
-  saveUninitialized: true,
-  store: new SequelizeStore({
-    db: sequelize,
-  }),
-};
-
-app.use(session(sess));
+// Removed Sequelize and session store for demo purposes
 
 //Extends: https://swagger.io/specification/#InfoObject
 const swaggerOptions = {
@@ -58,6 +45,5 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(require("./controllers/"));
 
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log("Now listening"));
-});
+// Start server without waiting for database
+app.listen(PORT, () => console.log("Now listening (no DB)"));
