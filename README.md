@@ -1,145 +1,155 @@
-<!-- Project Shields -->
-
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-[![LinkedIn][linkedin-shield]][linkedin-url1]
+# 🚀 My Crypto Render
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express.js-Backend-000000?logo=express&logoColor=white)](https://expressjs.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Sequelize](https://img.shields.io/badge/Sequelize-ORM-52B0E7?logo=sequelize&logoColor=white)](https://sequelize.org/)
+[![Handlebars](https://img.shields.io/badge/Handlebars-Templating-f0772b?logo=handlebarsdotjs&logoColor=white)](https://handlebarsjs.com/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-UI-7952B3?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 
-# my_crypto
-![Screen Shot 2022-04-10 at 10 19 43 PM](https://user-images.githubusercontent.com/94779524/162654620-8e35d568-57e0-44e3-bfec-6ea9dc07a347.png)
+A full-stack cryptocurrency tracker built with Node.js, Express, MySQL, Sequelize, and Handlebars.  
+Browse top coins, monitor market data, and save favorites with authentication and session support.
 
-### Table of contents
-* [About The Project](#About-The-Project)
-* [Criteria](#criteria)
-* [Installation](#instalation)
-* [Technologies](#technologies)
-* [What was done](#What-was-done)
-* [Contributors](#contributors)
-* [links](#links)
-* [Contact](#contact)
+---
 
-### About The Project
-My_Crypto is an application to view and track cryptocurrency. A user will be able to use the homepage as a reference to the top 100 crypto prices. A user will have the ability to store their favorite cryptos and add the amount they have. Making it easy to track their value and their earnings. My_Crypto also has a crypto converter. The user can choose from a list of cryptos along with currencies and enter their amount of crypto to see what their crypto is worth in the currency they chose.
+## 📸 Preview
 
-### Criteria
+![My Crypto Screenshot](https://user-images.githubusercontent.com/94779524/162654620-8e35d568-57e0-44e3-bfec-6ea9dc07a347.png)
 
-* Use Node.js and Express.js to create a RESTful API.
+---
 
-* Use Handlebars.js as the templating engine.
+## ✨ Features
 
-* Use MySQL and the Sequelize ORM for the database.
+- 📈 View and track top cryptocurrency prices
+- ⭐ Save favorite coins to your account
+- 🔐 Authentication with sessions and cookies
+- 🧱 MVC project structure for maintainability
+- 📚 API documentation using Swagger
+- 📱 Responsive UI with Bootstrap
+- 🌐 Deployed web application (Heroku)
 
-* Have both GET and POST routes for retrieving and adding new data.
+---
 
-* Be deployed using Heroku (with data).
+## 🧰 Tech Stack
 
-* Use at least one new library, package, or technology that we haven’t discussed.
+### Core
+- **JavaScript**
+- **Node.js**
+- **Express.js**
 
-* Have a polished UI.
+### Database & ORM
+- **MySQL**
+- **Sequelize**
 
-* Be responsive.
+### Frontend
+- **Handlebars**
+- **Bootstrap**
+- **jQuery**
 
-* Be interactive (i.e., accept and respond to user input).
+### Additional Libraries
+- Axios  
+- bcrypt  
+- cheerio  
+- connect-session-sequelize  
+- dotenv  
+- express-session  
+- mysql2  
+- node-fetch  
+- swagger-jsdoc  
+- swagger-ui-express
 
-* Have a folder structure that meets the MVC paradigm.
+---
 
-* Include authentication (express-session and cookies).
+## 🏗️ Project Criteria Met
 
-* Protect API keys and sensitive information with environment variables.
+- RESTful API using Node.js + Express  
+- Handlebars templating engine  
+- MySQL + Sequelize ORM integration  
+- GET and POST routes implemented  
+- Authentication using sessions/cookies  
+- Environment variables for sensitive config  
+- MVC folder structure  
+- Responsive and interactive UI  
+- Deployed app with production data  
 
-* Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class/id naming conventions, indentation, quality comments, etc.).
+---
 
-* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+## ⚙️ Installation
 
-### Instalation
-
-- Clone or Fork the Repo to your computer.
-- Install NODEjs.
-- Use NPM to install dependencies:
-    "axios": "^0.26.1",
-    "bcrypt": "^5.0.1",
-    "cheerio": "^1.0.0-rc.10",
-    "circular-json": "^0.5.9",
-    "connect-session-sequelize": "^7.1.3",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3",
-    "express-handlebars": "^6.0.3",
-    "express-session": "^1.17.2",
-    "mysql2": "^2.3.3",
-    "node-fetch": "^2.6.7",
-    "node-require": "^0.0.10",
-    "nodemon": "^2.0.15",
-    "post": "^0.0.1",
-    "sequelize": "^6.17.0",
-    "swagger-jsdoc": "^6.2.0",
-    "swagger-ui-express": "^4.3.0"
-
+### 1) Clone the repository
+```bash
+git clone https://github.com/MaxKarltun/My-Crypto-Render.git
+cd My-Crypto-Render
 ```
 
-npm install 
-
+### 2) Install dependencies
+```bash
+npm install
 ```
 
-### Usage
+### 3) Configure environment variables
+Create a `.env` file in the project root and add the required values (example):
 
-Run the following from the directory where you have downloaded the repo.
-
+```env
+DB_NAME=your_database_name
+DB_USER=your_mysql_user
+DB_PASSWORD=your_mysql_password
+SESSION_SECRET=your_session_secret
 ```
 
+### 4) Seed and run
+```bash
 npm run seed
 npm start
-
 ```
 
-this is only if you want to run this in your own deployment. the live app is currently deployed on heroku.
+If you use nodemon in development:
+```bash
+npm run dev
+```
 
-### Technologies
-App build in:  
+---
 
-- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?logo=javascript&logoColor=%23F7DF1E&style=for-the-badge)
+## ▶️ Usage
 
-App runtime Frameworks and helpers:
+After starting the server, open the app in your browser (typically `http://localhost:3001` unless configured differently).
 
-- ![Node.js ](https://img.shields.io/badge/node.js-6DA55F?logo=node.js&logoColor=white&style=for-the-badge)
+Use the app to:
+- Browse top crypto assets
+- View market info
+- Create an account / log in
+- Save and manage favorite coins
 
-- ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?logo=express&logoColor=%2361DAFB&style=for-the-badge)
+---
 
-- ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?logo=mysql&logoColor=white&style=for-the-badge)
+## 🌍 Live Demo & Links
 
-- ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?logo=bootstrap&logoColor=white&style=for-the-badge)
-	
-- ![Git](https://img.shields.io/badge/git-%23F05033.svg?logo=git&logoColor=white&style=for-the-badge)
-	
-- ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?logo=jquery&logoColor=white&style=for-the-badge)
+- **Live App (Heroku):** https://fathomless-ocean-39616.herokuapp.com/  
+- **Repository:** https://github.com/MaxKarltun/My-Crypto-Render  
 
-### What was done
+---
 
-Used Node.js to create an application that uses technologies like axios, handlebars, mySQL, bootstrap, swagger, and sequelize which creates an environment that runs the front and backend to develop the application that is capable to run on the web.
+## 👥 Contributors
 
-### Contributors
-* Abraham Aguirre 
-* Julian Esquivel
-* Karltun Moreno
+- Abraham Aguirre  
+- Julian Esquivel  
+- Karltun Moreno  
 
-### Links
-* Heroku: https://fathomless-ocean-39616.herokuapp.com/
-* Project Link: https://github.com/aaguirre7/my_crypto
+---
 
-Thank you for taking time looking at this page.
+## 📄 License
 
-Happy painting!
+This project is licensed under the MIT License:  
+https://opensource.org/licenses/MIT
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+---
 
-<!-- CONTACT -->
-## Contact
+## 📬 Contact
 
-Abraham Aguirre Aguirre.Abraham@gmail.com
+**Abraham Aguirre**  
+Aguirre.Abraham@gmail.com
 
-<!-- MARKDOWN LINKS & IMAGES -->
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/abraham-aguirre-1b237293/
-[linkedin-url1]: https://www.linkedin.com/in/julianesquivel/
-[product-screenshot1]: ./public/assets/images/screenshot_1.png
-[
+---
+
+<p align="right"><a href="#-my-crypto-render">Back to top ↑</a></p>
