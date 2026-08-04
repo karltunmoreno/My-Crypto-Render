@@ -145,11 +145,6 @@ https://opensource.org/licenses/MIT
 
 ---
 
-## 📬 Contact
-
-**Abraham Aguirre**  
-Aguirre.Abraham@gmail.com
-
 ---
 
 <p align="right"><a href="#-my-crypto-render">Back to top ↑</a></p>
